@@ -8,7 +8,6 @@
 #include "Types.hpp"
 #include "util/LuaParser.hpp"
 #include "util/RandomNumberSequenceGen.hpp"
-#include "util/StateSpaceGraph.hpp"
 #include "util/PowerSet.hpp"
 
 using namespace RELAX;
@@ -26,7 +25,6 @@ void UnitTest() {
 		assert(n == s.GetID());
 	}
 }
-
 
 
 
