@@ -16,7 +16,18 @@ namespace RELAX {
 			GAPolicy& operator = (const GAPolicy& p) { PolicyBase<TState, TAction>::operator = (p); return *this; }
 
 
-			GAPolicy& Mutate() { return *this; }
+			GAPolicy& Mutate() {
+				// TODO: implement a genetic algorithm for simple policy-search:
+				//   1) maintain a population of policies
+				//   2) apply genetic operators to individuals: mutation + crossover
+				//   3) evaluate individual fitness: reward obtained by policy
+				//   4) evolve until we are bored
+				//
+				// assume the decision to mutate has already been made somehow
+				// pick one or more random? adjacent? <state=S, action=A> pairs
+				// randomly? (which distribution?) change A to some action != A
+				return *this;
+			}
 
 			GAPolicy& CrossOver(const GAPolicy& father, const GAPolicy& mother) {
 				const std::vector<TState, TAction>& fatherGenes = father.GetGenes();
